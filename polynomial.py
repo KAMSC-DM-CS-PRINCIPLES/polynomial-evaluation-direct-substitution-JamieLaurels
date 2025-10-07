@@ -1,4 +1,13 @@
 def evaluate_polynomial(degree, x, constant_term, *coefficients):
+    s=constant_term
+    k=1
+    pwr=x
+    if (degree!=len(coefficients)):
+        return "Should have raised ValueError"
+    while (k<degree+1):
+        s+=coefficients[k-1]*pwr**k
+        k+=1
+    return s
     # TODO: Implement polynomial evaluation using direct substitution method
     # TODO: Print step-by-step evaluation (S0, S1, S2, etc.)
     # TODO: Return final polynomial result
